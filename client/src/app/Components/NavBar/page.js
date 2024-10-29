@@ -10,13 +10,13 @@ import Link from "next/link";
 
 const CustomNavbar = () => {
   return (
-    <div className="Navbar-container shadow-lg fixed w-full top-0 z-50">
-      <div className="bg-black w-full h-20">
+    <div className="navbar-container shadow-lg fixed w-full top-0 z-50 backdrop-blur-md bg-opacity-80">
+      <div className="bg-gradient-to-r from-gray-900 to-gray-800 w-full h-20 transition-colors duration-500">
         <div className="flex items-center justify-between h-full px-8">
-          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 hover:scale-110 transition-transform duration-300 cursor-pointer">
             Nabin Karki
           </h1>
-          <div className="flex space-x-8">
+          <div className="flex space-x-6">
             {[
               { icon: <FaScrewdriverWrench size={20} />, label: "Skills" },
               { icon: <FaPinterest size={20} />, label: "Interest" },
@@ -33,12 +33,12 @@ const CustomNavbar = () => {
                 key={index}
                 href={link || "#"}
                 target={isExternal ? "_blank" : "_self"}
-                className="flex items-center space-x-2 cursor-pointer group"
+                className="flex items-center space-x-2 cursor-pointer group transition-transform transform hover:scale-105"
               >
-                <span className="text-white group-hover:text-blue-500 transition-colors duration-300">
+                <span className="text-gray-300 group-hover:text-blue-500 transition-colors duration-300">
                   {icon}
                 </span>
-                <p className="text-xl text-transparent bg-clip-text bg-gradient-to-r from-teal-500 to-blue-500 group-hover:from-blue-500 group-hover:to-purple-500 transition-colors duration-300">
+                <p className="text-lg font-semibold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 group-hover:from-blue-500 group-hover:to-purple-500 transition-colors duration-300">
                   {label}
                 </p>
               </Link>
@@ -47,8 +47,11 @@ const CustomNavbar = () => {
         </div>
       </div>
       <style jsx>{`
-        .Navbar-container {
-          backdrop-filter: blur(10px);
+        .navbar-container {
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .navbar-container h1:hover {
+          color: transparent;
         }
       `}</style>
     </div>
