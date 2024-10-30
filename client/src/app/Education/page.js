@@ -8,7 +8,7 @@ const Education = () => {
           Education
         </h2>
         <p className="mt-4 text-lg text-gray-800 leading-relaxed">
-          Bachelor's Degree in Computer Engineering from Kantipur Engineering
+          Currently Studying Bachelor's Degree in Computer Engineering from Kantipur Engineering
           College.
         </p>
       </section>

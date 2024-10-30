@@ -1,38 +1,60 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import CustomNavbar from "./Components/NavBar/page";
 import Footer from "./Components/Footer/page";
-import ProjectsSection from "./Components/ProjectSection/page";
-import Interest from "./Components/Interest/page";
-import Education from "./Components/Education/page";
-import Skills from "./Components/Skills/page";
-import Contacts from "./Components/Contacts/page";
-import Resume from "./Components/Resume/page";
-import Profile from "./Components/Profile/page";
+import ProjectsSection from "./ProjectSection/page";
+import Interest from "./Interest/page";
+import Education from "./Education/page";
+import Skills from "./Skills/page";
+import Contacts from "./Contacts/page";
+import Resume from "./Resume/page";
+import Profile from "./Profile/page";
+
 const MainPage = () => {
+  const skillsRef = useRef(null);
+  const interestRef = useRef(null);
+  const educationRef = useRef(null);
+  const contactsRef = useRef(null);
+  const resumeRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen">
-      <CustomNavbar />
+      <CustomNavbar
+        scrollToSkills={() => scrollToSection(skillsRef)}
+        scrollToInterest={() => scrollToSection(interestRef)}
+        scrollToEducation={() => scrollToSection(educationRef)}
+        scrollToContacts={() => scrollToSection(contactsRef)}
+        scrollToResume={() => scrollToSection(resumeRef)}
+      />
       <div className="flex flex-col items-center pt-10 p-8">
-        {/* Profile Section */}
-<Profile></Profile>
+        <Profile />
 
-        {/* Skills Section */}
-     <Skills></Skills>
+        <div ref={skillsRef}>
+          <Skills />
+        </div>
 
-        {/* Projects Section */}
-       <ProjectsSection></ProjectsSection>
+        <div ref={interestRef}>
+          <Interest />
+        </div>
 
-        {/* Interests Section */}
-        <Interest></Interest>
+        <div ref={educationRef}>
+          <Education />
+        </div>
 
-        {/* Education Section */}
-     <Education></Education>
+        <div ref={contactsRef}>
+          <Contacts />
+        </div>
 
-        {/* Contact Section */}
-      <Contacts></Contacts>
+        <div ref={resumeRef}>
+          <Resume />
+        </div>
 
-        {/* Resume Section */}
-      <Resume></Resume>
+        <ProjectsSection />
       </div>
       <Footer />
     </div>
