@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const Contacts = () => {
   return (
-    <div>
-      {" "}
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <section className="text-center mt-6 w-full max-w-3xl bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
           Contact
@@ -36,8 +35,46 @@ const Contacts = () => {
           </a>
         </div>
       </section>
+
+      {/* Contact Form Section */}
+      <section className="mt-8 w-full max-w-3xl bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out">
+        <h3 className="text-3xl font-bold text-center mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
+          Send Email
+        </h3>
+
+        <form className="space-y-4">
+          <div>
+            <input
+              type="text"
+              placeholder="Name"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <input
+              type="email"
+              placeholder="Your email"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+            />
+          </div>
+          <div>
+            <textarea
+              placeholder="Message"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500 h-32 resize-none"
+            ></textarea>
+          </div>
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="mt-4 inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full hover:shadow-lg transition-transform transform hover:scale-105 hover:bg-opacity-90"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </section>
     </div>
   );
-}
+};
 
-export default Contacts
+export default Contacts;
