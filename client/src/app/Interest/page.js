@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 
 const Interest = () => {
   return (
@@ -19,6 +19,6 @@ const Interest = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Interest
+export default Interest;

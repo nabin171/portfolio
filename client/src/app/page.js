@@ -9,6 +9,7 @@ import Skills from "./Skills/page";
 import Contacts from "./Contacts/page";
 import Resume from "./Resume/page";
 import Profile from "./Profile/page";
+import ParticlesBackground from "./Components/Tsparticles/page";
 
 const MainPage = () => {
   const skillsRef = useRef(null);
@@ -38,7 +39,7 @@ const MainPage = () => {
 
   return (
     <div
-      className="min-h-screen bg-cover bg-center"
+      className="relative min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: `url('/bg.jpg')`, // Path to the image in the public folder
         backgroundSize: "cover",
@@ -46,7 +47,11 @@ const MainPage = () => {
         backgroundAttachment: "fixed",
       }}
     >
-      <div className="pt-5">
+      {/* Background particles */}
+      <ParticlesBackground></ParticlesBackground>
+      
+
+      <div className="pt-5 relative z-10">
         <CustomNavbar
           scrollToSkills={() => scrollToSection(skillsRef)}
           scrollToInterest={() => scrollToSection(interestRef)}
@@ -55,7 +60,8 @@ const MainPage = () => {
           scrollToResume={() => scrollToSection(resumeRef)}
         />
       </div>
-      <div className="flex flex-col items-center pt-10 p-8 bg-white bg-opacity-80">
+
+      <div className="flex flex-col items-center pt-10 p-8 bg-white bg-opacity-80 relative z-10">
         {/* Profile Section */}
         <Profile />
 
@@ -87,16 +93,16 @@ const MainPage = () => {
           <Resume />
         </div>
       </div>
-      <div className="pt-10">
+
+      <div className="pt-10 relative z-10">
         <Footer />
       </div>
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
         <button
-        
           onClick={scrollToTop}
-          className="fixed bottom-16 right-10 p-3  bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transition"
+          className="fixed bottom-16 right-10 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-500 transition"
           aria-label="Scroll to top"
         >
           ↑
@@ -107,3 +113,4 @@ const MainPage = () => {
 };
 
 export default MainPage;
+
