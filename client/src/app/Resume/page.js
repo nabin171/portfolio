@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const Resume = () => {
   return (
-    <div>
-      {" "}
-<section className="min-h-[70px] text-center mt-6 w-full max-w-3xl bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out">
+    <div className="flex justify-center">
+      <section className="min-h-[70px] text-center mt-6 max-w-3xl w-full bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out mx-4">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
           Resume
         </h2>
@@ -18,6 +17,6 @@ const Resume = () => {
       </section>
     </div>
   );
-}
+};
 
-export default Resume
+export default Resume;

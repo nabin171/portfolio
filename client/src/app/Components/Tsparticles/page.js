@@ -1,10 +1,8 @@
-// src/components/ParticlesBackground.js
-
 import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const ParticlesBackground = () => {
+const ParticleBackground = () => {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
@@ -14,33 +12,57 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fullScreen: { enable: true },
-        background: { color: { value: "#f0f2f5" } },
+        background: {
+          color: {
+            value: "#0d1117", // Background color to match the screenshot
+          },
+        },
         particles: {
-          number: { value: 50, density: { enable: true, area: 800 } },
-          color: { value: "#3498db" },
-          shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
-          size: { value: 3, random: true },
+          number: {
+            value: 50, // Adjust the number of particles as desired
+          },
+          color: {
+            value: "black", // Particle color, can be adjusted
+          },
+          shape: {
+            type: "circle",
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+          },
+          size: {
+            value: 3,
+            random: true,
+          },
           move: {
             enable: true,
-            speed: 1.5,
-            direction: "none",
-            random: false,
-            straight: false,
-            bounce: false,
+            speed: 1,
           },
-          line_linked: {
+          links: {
             enable: true,
+            color: "#ffffff",
             distance: 150,
-            color: "#3498db",
-            opacity: 0.5,
+            opacity: 0.4,
             width: 1,
           },
         },
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
+          },
+        },
+        detectRetina: true,
       }}
     />
   );
 };
 
-export default ParticlesBackground;
+export default ParticleBackground;

@@ -1,9 +1,9 @@
-import React from "react";
-
 const Profile = () => {
   return (
-    <div>
-      <section className="text-center mt-6 w-full  bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out mx-auto">
+    <div className="w-full max-w-3xl mx-auto">
+      {" "}
+      {/* Set max width and center */}
+      <section className="text-center mt-6 bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out">
         <div className="flex justify-center mb-6">
           <img
             src="student.png"
@@ -14,7 +14,7 @@ const Profile = () => {
         <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700 animate-textGlow">
           Welcome to My Portfolio
         </h1>
-        <p className="mt-4 text-lg text-gray-800 max-w-lg mx-auto leading-relaxed">
+        <p className="mt-4 text-lg text-gray-800 leading-relaxed">
           I'm Nabin Karki, a passionate developer with skills in various
           technologies.
         </p>

@@ -3,7 +3,7 @@ import React from "react";
 const Education = () => {
   return (
     <div className="bg-gray-100 w-full flex justify-center">
-      <section className="w-full max-w-7xl text-center mt-6 bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out mx-4">
+      <section className="w-full  max-w-3xl text-center mt-6 bg-gradient-to-r from-blue-50 to-blue-200 p-8 rounded-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition-transform duration-300 ease-out mx-4">
         <h2 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-700">
           Education
         </h2>

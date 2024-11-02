@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useRef, useState, useEffect } from "react";
 import CustomNavbar from "./Components/NavBar/page";
 import Footer from "./Components/Footer/page";
@@ -24,10 +24,9 @@ const MainPage = () => {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Handle Scroll to Top button visibility
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 200); // Show button after scrolling down 200px
+      setShowScrollTop(window.scrollY > 200);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,20 +37,9 @@ const MainPage = () => {
   };
 
   return (
-    <div
-      className="relative min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: `url('/bg.jpg')`, // Path to the image in the public folder
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
-      }}
-    >
-      {/* Background particles */}
-      <ParticlesBackground></ParticlesBackground>
-      
-
-      <div className="pt-5 relative z-10">
+    <div className="relative min-h-screen">
+      {/* Navbar */}
+      <div className="fixed top-0 left-0 w-full z-50">
         <CustomNavbar
           scrollToSkills={() => scrollToSection(skillsRef)}
           scrollToInterest={() => scrollToSection(interestRef)}
@@ -61,12 +49,18 @@ const MainPage = () => {
         />
       </div>
 
-      <div className="flex flex-col items-center pt-10 p-8 bg-white bg-opacity-80 relative z-10">
-        {/* Profile Section */}
-        <Profile />
+      {/* Profile Section */}
+      <div className="relative z-10">
+        <div className="flex flex-col items-center pt-20 p-8 relative z-10">
+          <Profile />
+        </div>
+
+        {/* Sections below Profile with Particles Background */}
+
+        <ParticlesBackground />
 
         {/* Skills Section */}
-        <div ref={skillsRef}>
+        <div ref={skillsRef} className="pt-10 p-8">
           <Skills />
         </div>
 
@@ -74,27 +68,28 @@ const MainPage = () => {
         <ProjectsSection />
 
         {/* Interests Section */}
-        <div ref={interestRef}>
+        <div ref={interestRef} className="pt-10 p-8">
           <Interest />
         </div>
 
         {/* Education Section */}
-        <div ref={educationRef}>
+        <div ref={educationRef} className="pt-10 p-8">
           <Education />
         </div>
 
         {/* Contact Section */}
-        <div ref={contactsRef}>
+        <div ref={contactsRef} className="pt-10 p-8">
           <Contacts />
         </div>
 
         {/* Resume Section */}
-        <div ref={resumeRef}>
+        <div ref={resumeRef} className="pt-10 p-8">
           <Resume />
         </div>
       </div>
 
-      <div className="pt-10 relative z-10">
+      {/* Footer */}
+      <div className="pt-10">
         <Footer />
       </div>
 
@@ -113,4 +108,3 @@ const MainPage = () => {
 };
 
 export default MainPage;
-
