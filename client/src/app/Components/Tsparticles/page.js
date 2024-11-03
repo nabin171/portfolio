@@ -1,68 +1,69 @@
-import React from "react";
+// In ParticlesBackground.js or ParticlesBackground.tsx
+import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-const ParticleBackground = () => {
-  const particlesInit = async (main) => {
-    await loadFull(main);
+const ParticlesBackground = () => {
+  const particlesInit = useCallback(async (engine) => {
+    await loadFull(engine);
+  }, []);
+
+  const particlesOptions = {
+    background: {
+      color: {
+        value: "#f0f0f0", // Background color
+      },
+    },
+    particles: {
+      number: {
+        value: 50, // Number of particles
+      },
+      color: {
+        value: "#007bff", // Particle color
+      },
+      shape: {
+        type: "circle", // Shape of particles
+      },
+      opacity: {
+        value: 0.5,
+      },
+      size: {
+        value: { min: 3, max: 7 }, // Size of particles
+      },
+      move: {
+        enable: true,
+        speed: 1, // Speed of particles
+      },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#007bff",
+        opacity: 0.4,
+        width: 1,
+      },
+    },
+    interactivity: {
+      events: {
+        onHover: {
+          enable: true,
+          mode: "repulse", // Interaction mode on hover
+        },
+        onClick: {
+          enable: true,
+          mode: "push", // Interaction mode on click
+        },
+      },
+    },
   };
 
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      options={{
-        background: {
-          color: {
-            value: "#0d1117", // Background color to match the screenshot
-          },
-        },
-        particles: {
-          number: {
-            value: 50, // Adjust the number of particles as desired
-          },
-          color: {
-            value: "black", // Particle color, can be adjusted
-          },
-          shape: {
-            type: "circle",
-          },
-          opacity: {
-            value: 0.5,
-            random: true,
-          },
-          size: {
-            value: 3,
-            random: true,
-          },
-          move: {
-            enable: true,
-            speed: 1,
-          },
-          links: {
-            enable: true,
-            color: "#ffffff",
-            distance: 150,
-            opacity: 0.4,
-            width: 1,
-          },
-        },
-        interactivity: {
-          events: {
-            onHover: {
-              enable: true,
-              mode: "repulse",
-            },
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
-          },
-        },
-        detectRetina: true,
-      }}
+      options={particlesOptions}
+      className="absolute inset-0 z-0"
     />
   );
 };
 
-export default ParticleBackground;
+export default ParticlesBackground;
