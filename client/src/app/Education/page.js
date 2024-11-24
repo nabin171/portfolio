@@ -11,7 +11,7 @@ const Education = () => {
         <div className="mt-6 text-lg text-gray-800 leading-relaxed space-y-4">
           <p>
             <strong>
-              Currently pursuing a Bachelor's Degree in Computer Engineering
+              Currently pursuing a Bachelors Degree in Computer Engineering
             </strong>
             <br />
             at Kantipur Engineering College

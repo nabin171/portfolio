@@ -15,7 +15,7 @@ const Profile = () => {
           Welcome to My Portfolio
         </h1>
         <p className="mt-4 text-lg text-gray-800 leading-relaxed">
-          I'm Nabin Karki, a passionate developer with skills in various
+          Im Nabin Karki a passionate developer with skills in various
           technologies.
         </p>
         <a
