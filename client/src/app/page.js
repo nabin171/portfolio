@@ -9,7 +9,7 @@ import Skills from "./Skills/page";
 import Contacts from "./Contacts/page";
 import Resume from "./Resume/page";
 import Profile from "./Profile/page";
-import ParticlesBackground from "./Components/Tsparticles/page";
+// import ParticlesBackground from "./Components/Tsparticles/page";
 
 const MainPage = () => {
   const skillsRef = useRef(null);
@@ -57,7 +57,7 @@ const MainPage = () => {
 
         {/* Sections below Profile with Particles Background */}
 
-        <ParticlesBackground />
+        {/* <ParticlesBackground /> */}
 
         {/* Skills Section */}
         <div ref={skillsRef} className="pt-10 p-8">
