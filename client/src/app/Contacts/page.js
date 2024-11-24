@@ -8,7 +8,7 @@ const Contacts = () => {
           Contact
         </h2>
         <p className="mt-4 text-lg text-gray-800 leading-relaxed">
-          Feel free to reach out via email at:{" "}
+          Feel free to reach out through email at:{" "}
           <a
             href="mailto:karki0008@gmail.com"
             className="text-blue-500 underline hover:text-blue-700"
