@@ -55,23 +55,23 @@ Hi, I'm Nabin Karki, a passionate developer with experience in full-stack web de
   
 ## Education
 
-- **Bachelor of Technology** – [Your University Name]
-  - Expected Graduation: [Year]
+- **Bachelor of Engineering** – [Kantipur Engineering College]
+  - Expected Graduation: [2025]
   - Relevant Coursework: Full Stack Web Development, Data Structures and Algorithms, Object-Oriented Programming
   
 ## Contact
 
 You can reach me through the following platforms:
 
-- **Email**: [Your Email Address]
-- **LinkedIn**: [Your LinkedIn Profile Link]
-- **GitHub**: [Your GitHub Profile Link]
+- **Email**: [karki0008@gmail.com]
+- **LinkedIn**: [https://www.linkedin.com/in/nabin-karki-22a872203/]
+- **GitHub**: [https://github.com/nabin171]
 
 ## Resume
 
 You can download my resume from the link below:
 
-- [Download Resume](#)  *(Replace this link with your actual resume link)*
+- [Download Resume](https://portfolio-git-main-nabin-karkis-projects-d6b8accc.vercel.app/Nabin-Karki-cv.pdf)  
 
 ## License
 
